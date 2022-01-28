@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import HTMLReactParser from 'html-react-parser'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import millify from 'millify'
 import { Col, Row, Typography, Select } from 'antd'
 import {
@@ -119,7 +119,7 @@ const CryptoDetail = () => {
         <Col className="stats-container">
           <Col className="coin-value-statistics">
             <Col className="coin-value-statistics-heading">
-              <Title className="coin-details-heading">
+              <Title className="coin-detailes-heading">
                 {cryptoDetails.name} Value Statistics
               </Title>
               <p>An overview showing the stats of {cryptoDetails.name}</p>
@@ -132,6 +132,44 @@ const CryptoDetail = () => {
                 </Col>
                 <Text className="stats">{value}</Text>
               </Col>
+            ))}
+          </Col>
+          <Col className="other-stats-info">
+            <Col className="coin-value-statistics-heading">
+              <Title className="coin-detailes-heading">Other Statistics</Title>
+              <p>An overview showing the stats of all cryptocurrencies</p>
+            </Col>
+            {genericStats.map(({ icon, title, value }) => (
+              <Col className="coin-stats">
+                <Col className="coin-stats-name">
+                  <Text>{icon}</Text>
+                  <Text>{title}</Text>
+                </Col>
+                <Text className="stats">{value}</Text>
+              </Col>
+            ))}
+          </Col>
+        </Col>
+        <Col className="coin-desk-link">
+          <Row className="coin-desc">
+            <Title level={3} className="coin-details-heading">
+              What is {CryptoDetail.name}
+              {HTMLReactParser(cryptoDetails.description)}
+            </Title>
+          </Row>
+          <Col className="coin-links">
+            <Title level={3} className="coin-details-heading">
+              {cryptoDetails.name} Links
+            </Title>
+            {cryptoDetails.links.map((link) => (
+              <Row className="coin-link" key={link.name}>
+                <Title level={5} className="link-name">
+                  {link.type}
+                </Title>
+                <a href={link.url} target="_blank" rel="noreferrer">
+                  {link.name}
+                </a>
+              </Row>
             ))}
           </Col>
         </Col>

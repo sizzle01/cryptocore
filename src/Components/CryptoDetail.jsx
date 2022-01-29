@@ -14,7 +14,11 @@ import {
   NumberOutlined,
   ThunderboltOutlined,
 } from '@ant-design/icons'
-import { useGetCryptoDetailsQuery } from '../services/CryptoApi'
+import {
+  useGetCryptoDetailsQuery,
+  useGetCryptoHistoryQuery,
+} from '../services/CryptoApi'
+import LineChart from './LineChart'
 const { Title, Text } = Typography
 const { Option } = Select
 
@@ -22,7 +26,13 @@ const CryptoDetail = () => {
   const { coinId } = useParams()
   const [timePeriod, setTimePeriod] = useState('7d')
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId)
+  const { data: coinHistory } = useGetCryptoHistoryQuery({
+    coinId,
+    timePeriod,
+  })
+
   const cryptoDetails = data?.data?.coin
+  console.log(cryptoDetails)
   if (isFetching) return 'Loading....'
 
   const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y']
@@ -115,7 +125,11 @@ const CryptoDetail = () => {
             <Option key={date}>{date}</Option>
           ))}
         </Select>
-        {/* {Line Chart} */}
+        <LineChart
+          coinHistory={coinHistory}
+          currentPrice={millify(cryptoDetails.price)}
+          coinName={cryptoDetails.name}
+        />
         <Col className="stats-container">
           <Col className="coin-value-statistics">
             <Col className="coin-value-statistics-heading">
@@ -153,7 +167,7 @@ const CryptoDetail = () => {
         <Col className="coin-desk-link">
           <Row className="coin-desc">
             <Title level={3} className="coin-details-heading">
-              What is {CryptoDetail.name}
+              What is {cryptoDetails.name}
               {HTMLReactParser(cryptoDetails.description)}
             </Title>
           </Row>

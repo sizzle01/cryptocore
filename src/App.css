@@ -14,26 +14,105 @@
   box-sizing: border-box;
 }
 
+.circle1 {
+  height: 150px;
+  width: 150px;
+  background: white !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ) !important;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 60%;
+  margin-top: 5%;
+}
+.circle2 {
+  height: 180px;
+  width: 180px;
+  background: white !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ) !important;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 1%;
+  opacity: 0.8;
+}
+.circle3 {
+  height: 80px;
+  width: 80px;
+  background: white !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ) !important;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 8%;
+}
+.circle4 {
+  height: 80px;
+  width: 80px;
+  background: white !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ) !important;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 28%;
+  margin-top: 5%;
+}
+
 a:hover {
-  color: var(--pink) !important;
+  /* color: var(--pink) !important; */
+  color: black !important;
 }
 
 .app {
   display: flex;
   overflow: hidden;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb) !important;
 }
-
+.heading {
+  color: #426696 !important;
+}
+.home-title {
+  color: #426696 !important;
+}
 .navbar {
   flex: 0.2;
-  background-color: rgb(0, 21, 41);
+  /* background-color: rgb(0, 21, 41); */
+}
+/* Menulist bg */
+.dark {
+  background: white !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ) !important;
 }
 
+.ant-statistic-content-value {
+  font-weight: 650;
+}
 .main {
   flex: 0.8;
   width: 100%;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb) !important;
 }
 .routes {
   padding: 20px;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb) !important;
 }
 .nav-container {
   position: fixed;
@@ -41,7 +120,12 @@ a:hover {
   margin: 10px;
   height: 100vh;
   margin: 0px;
-  background-color: rgb(0, 21, 41);
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
 }
 
 .logo-container {
@@ -50,12 +134,18 @@ a:hover {
   padding: 20px;
   align-items: center;
   width: 100%;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
 }
 .logo {
   margin: 0 0 0 15px;
 }
 .logo a {
-  color: white;
+  color: black !important;
 }
 .menu-control-container {
   display: none !important;
@@ -89,6 +179,13 @@ a:hover {
 @media screen and (max-width: 1000px) {
   .main {
     margin-left: 100px;
+  }
+  .circle1 {
+    height: 140px;
+    width: 140px;
+  }
+  .circle1 {
+    display: none;
   }
 }
 
@@ -126,10 +223,18 @@ a:hover {
     right: 0px;
   }
   .home-title {
-    font-size: 1.4rem !important;
+    font-size: 1.2rem !important;
   }
   .show-more {
     font-size: 1.3rem !important;
+  }
+  .circle3 {
+    margin-left: 50%;
+    margin-top: 41%;
+  }
+  .circle4 {
+    display: none;
+    opacity: 0.2;
   }
 }
 
@@ -290,8 +395,16 @@ a:hover {
 .select-news {
   width: 180px;
 }
+/* News Card */
 .news-card {
   min-height: 300px !important;
+  background: white !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2)
+  ) !important;
+  border: none;
 }
 .news-image-container {
   display: flex !important;
@@ -358,8 +471,17 @@ a:hover {
 .crypto-card-container {
   min-height: 65vh !important;
 }
+/* Crypo card */
 .crypto-card {
   min-width: 250px;
+  background: white !important;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.1)
+  ) !important;
+  padding: 8px !important;
+  border: none !important;
 }
 .crypto-card .crypto-image {
   width: 35px;
@@ -370,7 +492,11 @@ a:hover {
 }
 
 .footer {
-  background-color: #001529;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
   display: flex;
   flex-direction: column;
   padding: 20px;

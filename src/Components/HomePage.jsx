@@ -14,8 +14,12 @@ const HomePage = () => {
   return (
     <div>
       <Title level={2} className="heading">
-        Globa l Crypto Stats
+        Global Crypto Stats
       </Title>
+      <div className="circle1"></div>
+      <div className="circle2"></div>
+      <div className="circle3"></div>
+      <div className="circle4"></div>
       <Row>
         <Col span={12}>
           <Statistic

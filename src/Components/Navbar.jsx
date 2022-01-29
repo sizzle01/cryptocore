@@ -17,21 +17,15 @@ const Navbar = () => {
         <Avatar src={icon} size="large" />
 
         <Typography.Title level={2} className="logo">
-          <Link to="/">Cryptoverse</Link>
+          <Link to="/">CRYPTOCORE</Link>
         </Typography.Title>
       </div>
-      <Menu theme="dark">
+      <Menu className="dark">
         <Menu.Item key={1} icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key={2} icon={<FundOutlined />}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
-        </Menu.Item>
-        <Menu.Item key={3} icon={<FundOutlined />}>
-          <Link to="/crypto/:coinId">Crypto details</Link>
-        </Menu.Item>
-        <Menu.Item key={4} icon={<MoneyCollectOutlined />}>
-          <Link to="/exchanges">Exchanges</Link>
         </Menu.Item>
         <Menu.Item key={5} icon={<BulbOutlined />}>
           <Link to="/news">News</Link>

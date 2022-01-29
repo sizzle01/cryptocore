@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Card, Row, Col, Input } from 'antd'
 import millify from 'millify'
 import { useGetCryptosQuery } from '../services/CryptoApi'
+import VanillaTilt from 'vanilla-tilt'
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100
@@ -17,6 +18,12 @@ const Cryptocurrencies = ({ simplified }) => {
   }, [cryptosList, searchTerm])
 
   if (isFetching) return 'Loading....'
+
+  const options = {
+    scale: 1.2,
+    speed: 1000,
+    max: 30,
+  }
   return (
     <div>
       {!simplified && (
@@ -38,6 +45,7 @@ const Cryptocurrencies = ({ simplified }) => {
           >
             <Link to={`/crypto/${currency.uuid}`}>
               <Card
+                className="crypto-card"
                 title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} />}
                 hoverable

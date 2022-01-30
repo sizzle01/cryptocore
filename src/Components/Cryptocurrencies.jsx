@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Card, Row, Col, Input } from 'antd'
 import millify from 'millify'
 import { useGetCryptosQuery } from '../services/CryptoApi'
-import VanillaTilt from 'vanilla-tilt'
+import Tilt from 'react-parallax-tilt'
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100
@@ -44,16 +44,20 @@ const Cryptocurrencies = ({ simplified }) => {
             key={currency.uuid}
           >
             <Link to={`/crypto/${currency.uuid}`}>
-              <Card
-                className="crypto-card"
-                title={`${currency.rank}. ${currency.name}`}
-                extra={<img className="crypto-image" src={currency.iconUrl} />}
-                hoverable
-              >
-                <p> price: {millify(currency.price)}</p>
-                <p> Market Cap: {millify(currency.marketCap)}</p>
-                <p>Daily Change: {millify(currency.change)}%</p>
-              </Card>
+              <Tilt>
+                <Card
+                  className="crypto-card"
+                  title={`${currency.rank}. ${currency.name}`}
+                  extra={
+                    <img className="crypto-image" src={currency.iconUrl} />
+                  }
+                  hoverable
+                >
+                  <p> price: {millify(currency.price)}</p>
+                  <p> Market Cap: {millify(currency.marketCap)}</p>
+                  <p>Daily Change: {millify(currency.change)}%</p>
+                </Card>
+              </Tilt>
             </Link>
           </Col>
         ))}

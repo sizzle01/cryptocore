@@ -5671,6 +5671,11 @@
     "import-local" "^3.0.2"
     "jest-cli" "^27.4.7"
 
+"jquery@^3.1.1":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
+
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
   "resolved" "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -7673,6 +7678,11 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
+"react-parallax-tilt@^1.5.90":
+  "integrity" "sha512-wDU07OAFBGLWlEXm8YS0xQHERr3DT2rW0usIER8BG8GSQZBmHPV4TucDqe/W+mMMjLo6izyH5jmaq1UijfvdVQ=="
+  "resolved" "https://registry.npmjs.org/react-parallax-tilt/-/react-parallax-tilt-1.5.90.tgz"
+  "version" "1.5.90"
+
 "react-property@2.0.0":
   "integrity" "sha512-kzmNjIgU32mO4mmH5+iUyrqlpFQhF8K2k7eZ4fdLSOPFrD1XgEuSBv9LDEgxRXTMBqMd8ppT0x6TIzqE5pdGdw=="
   "resolved" "https://registry.npmjs.org/react-property/-/react-property-2.0.0.tgz"
@@ -8754,6 +8764,13 @@
   "integrity" "sha512-eHY7nBftgThBqOyHGVN+l8gF0BucP09fMo0oO/Lb0w1OF80dJv+lDVpXG60WMQvkcxAkNybKsrEIE3ZtKGmPrA=="
   "resolved" "https://registry.npmjs.org/thunky/-/thunky-1.1.0.tgz"
   "version" "1.1.0"
+
+"tilt.js@^1.2.1":
+  "integrity" "sha512-IGRh3FJbq6BRH2ETb2KxDWont2k740oR+0QMs39QVkjnr7QmA6L1VzSKsOLgFXg5QNtHyRKp7vzFoJCYxgzsJA=="
+  "resolved" "https://registry.npmjs.org/tilt.js/-/tilt.js-1.2.1.tgz"
+  "version" "1.2.1"
+  dependencies:
+    "jquery" "^3.1.1"
 
 "timsort@^0.3.0":
   "integrity" "sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q="

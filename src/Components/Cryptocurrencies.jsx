@@ -19,11 +19,6 @@ const Cryptocurrencies = ({ simplified }) => {
 
   if (isFetching) return 'Loading....'
 
-  const options = {
-    scale: 1.2,
-    speed: 1000,
-    max: 30,
-  }
   return (
     <div>
       {!simplified && (
@@ -53,7 +48,7 @@ const Cryptocurrencies = ({ simplified }) => {
                   }
                   hoverable
                 >
-                  <p> price: {millify(currency.price)}</p>
+                  <p> price: ${millify(currency.price)}</p>
                   <p> Market Cap: {millify(currency.marketCap)}</p>
                   <p>Daily Change: {millify(currency.change)}%</p>
                 </Card>
